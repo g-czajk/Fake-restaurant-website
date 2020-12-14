@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+
+:root {
+    --fontFamily: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: var(--fontFamily);
+    background-color: #F8F9FA;
+    background-position: center;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
+    background-size: 130%;
+    color: white;
+    animation: size 8s infinite linear alternate
+}
+
+header nav {
+    display: none;
+}
+
+header .logo-wrap {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    background-color: #00000044;
+}
+
+header .logo-wrap img {
+    width: 50%;
+    margin: auto;
+}
+
+header .title-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    background-color: #00000044;
+}
+
+header .title-wrap .title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 7% 5%;
+    /* background-color: #00000055; */
+}
+
+header .title-wrap .title.position-1 {
+    top: 22%;
+}
+
+header .title-wrap .title.position-2 {
+    top: 38%;
+}
+
+header .title-wrap .title.position-3 {
+    top: 34%;
+    text-align: right;
+}
+
+header .title-wrap .title h1 {
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+
+
+header .title-wrap .title p {
+    font-size: 20px;
+}
+
+@keyframes size {
+    100% {
+        background-size: 140%;
+    }
+}
