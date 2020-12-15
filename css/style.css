@@ -16,7 +16,19 @@ body {
     background-position: center;
 }
 
+h2 {
+    font-size: 26px;
+    color: #212529;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
 /* HEADER */
+
+.header-wrap {
+    background-color: #000;
+    box-shadow: 0 0 4px #000;
+}
 
 header {
     width: 100%;
@@ -24,11 +36,7 @@ header {
     background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
     background-size: 130%;
     color: white;
-    animation: size 8s infinite linear alternate
-}
-
-header nav {
-    display: none;
+    animation: background-size 8s infinite linear alternate, img-change 8s infinite linear;
 }
 
 header .logo-wrap {
@@ -39,8 +47,13 @@ header .logo-wrap {
 }
 
 header .logo-wrap img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50%;
     margin: auto;
+    z-index: 5;
 }
 
 header .title-wrap {
@@ -55,12 +68,11 @@ header .title-wrap .title {
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 7% 5%;
-    /* background-color: #00000055; */
+    padding: 7% 20px;
 }
 
 header .title-wrap .title.position-1 {
-    top: 22%;
+    top: 25%;
 }
 
 header .title-wrap .title.position-2 {
@@ -75,16 +87,286 @@ header .title-wrap .title.position-3 {
 header .title-wrap .title h1 {
     margin-bottom: 5px;
     font-size: 40px;
+    z-index: 1;
 }
-
-
 
 header .title-wrap .title p {
     font-size: 20px;
 }
 
-@keyframes size {
+/* BURGER MENU  */
+
+.burger {
+    position: fixed;
+    top: 5vh;
+    left: 20px;
+    width: 35px;
+    height: 26px;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 1;
+    animation: show 2s 2.5s ease both;
+    z-index: 99;
+}
+
+.burger.active {
+    transform: rotate(-90deg);
+}
+
+.burger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s, transform .2s;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger.active span:nth-child(1) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+}
+
+.burger span:nth-child(2) {
+    top: calc(50% - 2px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger span:nth-child(3) {
+    bottom: 0;
+}
+
+.burger.active span:nth-child(3) {
+    bottom: calc(50% - 2px);
+    transform: rotate(-45deg);
+}
+
+/* NAV BAR */
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 98;
+    opacity: 0;
+}
+
+nav.show {
+    display: block;
+    animation: nav-show 1s ease both;
+}
+
+nav .nav-logo-wrap {
+    position: fixed;
+    width: 100%;
+    height: 25%;
+    background-color: #00000044;
+}
+
+nav .nav-logo-wrap img {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    margin: auto;
+    z-index: 5;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ccc;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* SECTION ABOUT */
+
+section.about {
+    padding: 40px 20px;
+}
+
+section.about p {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #343a40;
+    letter-spacing: .4px;
+    line-height: 1.6em;
+}
+
+section.about p.signature {
+    padding-right: 20px;
+    font-style: italic;
+    text-align: right;
+}
+
+/* SECTION GALLERY  */
+
+section.gallery {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 0 4px #000;
+}
+
+section.gallery .carousel-wrap img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+section.gallery .carousel-wrap img.visible {
+    opacity: 1;
+}
+
+section.gallery .carousel-wrap img.carousel-picture-2,
+section.gallery .carousel-wrap img.carousel-picture-3,
+section.gallery .carousel-wrap img.carousel-picture-4 {
+    position: absolute;
+    top: 0;
+}
+
+section.gallery .carousel-wrap span {
+    display: block;
+    position: absolute;
+    font-size: 36px;
+    color: #fff;
+}
+
+section.gallery .carousel-wrap span.arrow-back {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+section.gallery .carousel-wrap span.arrow-next {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+section.gallery .carousel-wrap .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 10%;
+    font-size: 13px;
+    color: white;
+}
+
+section.gallery .carousel-wrap .dots i {
+    margin-right: 4px;
+}
+
+/* SECTION MENU RESTAURANT */
+
+section.menu-restaurant {
+    padding: 40px 20px;
+}
+
+section.menu-restaurant .menu-logo-wrap {
+    margin: 20px 0 40px 0;
+    width: 100%;
+}
+
+section.menu-restaurant .menu-logo-wrap img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+section.menu-restaurant h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.menu-restaurant .meal-category {
+    margin-top: 20px;
+}
+
+section.menu-restaurant .meal-category h3 {
+    font-size: 15px;
+    color: #343a40;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4em;
+    letter-spacing: .4px;
+}
+
+@keyframes background-size {
     100% {
         background-size: 140%;
+    }
+}
+
+@keyframes img-change {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes nav-show {
+    40% {
+        opacity: .95;
+    }
+
+    100% {
+        opacity: .95;
     }
 }

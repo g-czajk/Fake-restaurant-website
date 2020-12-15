@@ -4,42 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wiślana 42 - restauracja</title>
+    <title>balley's 42 - restaurant</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="burger"><span></span>
-            <span></span>
-            <span></span></div>
-        <div class="logo-wrap"><img src="img/logo_restaurant_cropped.png" alt="logo restauracji wiślana 42"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#" class="nav-btn">Strona główna</a></li>
-                <li><a href="#" class="nav-btn">Restauracja</a></li>
-                <li><a href="#" class="nav-btn">Menu</a></li>
-                <li><a href="#" class="nav-btn">Bar</a></li>
-                <li><a href="#" class="nav-btn">Rezerwacje</a></li>
-                <li><a href="#" class="nav-btn">Znajdź nas</a></li>
-            </ul>
-        </nav>
+    <div class="burger"><span></span>
+        <span></span>
+        <span></span></div>
 
-        <div class="title-wrap">
-            <div class="title position-1">
-                <h1>Lorem.</h1>
-                <p>Quos optio saepe enim facilis rem.</p>
+    <div class="header-wrap">
+        <header>
+
+            <div class="logo-wrap"><img src="img/logo_restaurant_new.png" alt="white logo of balley's 42 restaurant">
+            </div>
+            <div class="title-wrap">
+                <div class="title position-1">
+                    <h1>Place</h1>
+                    <p>Quos optio saepe enim facilis rem.</p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo-wrap"><img src="img/logo_restaurant_new.png" alt="white logo of balley's 42 restaurant">
+        </div>
+        <ul>
+            <li><a href="#" class="nav-btn">Home</a></li>
+            <li><a href="#" class="nav-btn">Restaurant</a></li>
+            <li><a href="#" class="nav-btn">Menu</a></li>
+            <li><a href="#" class="nav-btn">Bar</a></li>
+            <li><a href="#" class="nav-btn">Reservations</a></li>
+            <li><a href="#" class="nav-btn">Find us</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="about">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ipsum fuga numquam deserunt magnam.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor doloribus est distinctio vitae corrupti
+            iusto
+            harum culpa, suscipit ea provident iure, illum nisi laborum commodi quidem? Velit voluptatum possimus
+            quisquam, officiis corporis minus nesciunt voluptatibus molestias deserunt modi numquam ex!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam nobis a maiores ad velit. Sed
+            corporis animi in quaerat suscipit nesciunt porro, facere quia iste ducimus nam, placeat mollitia
+            aspernatur
+            veritatis, veniam temporibus earum deserunt eveniet quasi saepe maxime.</p>
+        <p class="signature">balley's 42 Team</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="carousel-wrap">
+            <img class="carousel-picture-1 visible" src="../Strona-restauracja/img/carousel_picture_1.jpg"
+                alt="picture of a glass of wine and restaurant interior">
+            <img class="carousel-picture-2" src="../Strona-restauracja/img/carousel_picture_2.jpg"
+                alt="picture of a plate with some food on it">
+            <img class="carousel-picture-3" src="../Strona-restauracja/img/carousel_picture_3.jpg"
+                alt="picture of restaurant interior">
+            <img class="carousel-picture-3" src="../Strona-restauracja/img/carousel_picture_4.jpg"
+                alt="picture of a plate with pasta on it">
+            <span class="arrow-back"><i class="fas fa-chevron-left"></i></span>
+            <span class="arrow-next"><i class="fas fa-chevron-right"></i></span>
+            <div class="dots"><i class="fas fa-circle" data-dot="0"></i><i class="far fa-dot-circle" data-dot="1"></i><i
+                    class="far fa-dot-circle" data-dot="2"></i><i class="far fa-dot-circle" data-dot="3"></i>
             </div>
         </div>
+    </section>
+
+    <section class="menu-restaurant">
+        <div class="menu-logo-wrap"><img src="../Strona-restauracja/img/logo_restaurant_new_black.png"
+                alt="black logo of balley's 42 restaurant"></div>
+        <h2>Menu</h2>
+
+        <div class="meal-category snacks-salads">
+            <h3>Snacks & Salads</h3>
+            <div class="meals">
+                <div class="meal">
+                    <div class="meal-description">
+                        <h3 class="meal-name"></h3><span class="meal-price"></span>
+                    </div>
+                    <div class="meal-ingredients">
+                        <p class="ingredients"></p>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-description">
+                        <h3 class="meal-name"></h3><span class="meal-price"></span>
+                    </div>
+                    <div class="meal-ingredients">
+                        <p class="ingredients"></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
+    </section>
 
-        <script src="js/script.js"></script>
+    <section class="menu-bar"></section>
+
+    <script src="https://kit.fontawesome.com/5ff2b12ca8.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
