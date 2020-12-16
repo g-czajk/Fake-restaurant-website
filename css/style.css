@@ -213,11 +213,11 @@ nav ul li a {
 
 /* SECTION ABOUT */
 
-section.about {
+.about {
     padding: 40px 20px;
 }
 
-section.about p {
+.about p {
     margin: 20px 0;
     font-size: 15px;
     color: #343a40;
@@ -225,7 +225,7 @@ section.about p {
     line-height: 1.6em;
 }
 
-section.about p.signature {
+.about p.signature {
     padding-right: 20px;
     font-style: italic;
     text-align: right;
@@ -233,50 +233,50 @@ section.about p.signature {
 
 /* SECTION GALLERY  */
 
-section.gallery {
+.gallery {
     position: relative;
     width: 100%;
     box-shadow: 0 0 4px #000;
 }
 
-section.gallery .carousel-wrap img {
+.gallery .carousel-wrap img {
     display: block;
     width: 100%;
     opacity: 0;
     transition: 1s;
 }
 
-section.gallery .carousel-wrap img.visible {
+.gallery .carousel-wrap img.visible {
     opacity: 1;
 }
 
-section.gallery .carousel-wrap img.carousel-picture-2,
-section.gallery .carousel-wrap img.carousel-picture-3,
-section.gallery .carousel-wrap img.carousel-picture-4 {
+.gallery .carousel-wrap img.carousel-picture-2,
+.gallery .carousel-wrap img.carousel-picture-3,
+.gallery .carousel-wrap img.carousel-picture-4 {
     position: absolute;
     top: 0;
 }
 
-section.gallery .carousel-wrap span {
+.gallery .carousel-wrap span {
     display: block;
     position: absolute;
     font-size: 36px;
     color: #fff;
 }
 
-section.gallery .carousel-wrap span.arrow-back {
+.gallery .carousel-wrap span.arrow-back {
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
 }
 
-section.gallery .carousel-wrap span.arrow-next {
+.gallery .carousel-wrap span.arrow-next {
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
 }
 
-section.gallery .carousel-wrap .dots {
+.gallery .carousel-wrap .dots {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,28 +290,29 @@ section.gallery .carousel-wrap .dots {
     color: white;
 }
 
-section.gallery .carousel-wrap .dots i {
+.gallery .carousel-wrap .dots i {
     margin-right: 4px;
 }
 
 /* SECTION MENU RESTAURANT */
 
-section.menu-restaurant {
+.menu {
     padding: 40px 25px;
+    box-shadow: 0 0 4px #000;
 }
 
-section.menu-restaurant .menu-logo-wrap {
+.menu .menu-logo-wrap {
     margin: 20px 0 40px 0;
     width: 100%;
 }
 
-section.menu-restaurant .menu-logo-wrap img {
+.menu .menu-logo-wrap img {
     display: block;
     margin: 0 auto;
     width: 65%;
 }
 
-section.menu-restaurant h2 {
+.menu h2 {
     text-transform: uppercase;
     text-align: center;
 }
@@ -373,6 +374,99 @@ section.menu-restaurant h2 {
 .menu-item-description-name {
     font-size: 16px;
     color: #343a40;
+}
+
+/* SECTION MENU BAR */
+
+.menu.bar {
+    background-image: url(../img/section_menu_bar_background.jpg);
+    background-position-x: center;
+    background-size: cover;
+    box-shadow: 0 0 4px #000;
+}
+
+.menu.bar h2 {
+    color: #fff;
+}
+
+.bar .menu-category h3 {
+    color: #fff;
+}
+
+.bar .menu-item p {
+    color: #fff;
+}
+
+.bar .menu-item-description-name {
+    color: #fff;
+}
+
+/* SECTION RESERVATION */
+
+.reservation {
+    padding: 40px 25px;
+}
+
+.reservation-panel {
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.reservation-panel h2 {
+    margin-bottom: 15px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.reservation-panel h3 {
+    font-size: 10px;
+    color: #343a40;
+    line-height: 100%;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.reservation-panel button {
+    margin-top: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #343a40;
+}
+
+.reservation-panel button:focus {
+    outline: none;
+}
+
+.reservation-panel button a {
+    display: block;
+    padding: 14px 30px;
+    font-family: var(--fontFamily);
+    font-size: 13px;
+    color: #F8F9FA;
+    text-decoration: none;
+    height: 100%;
+}
+
+.reservation-message {
+    padding: 10px 0;
+}
+
+.reservation-message p {
+    font-size: 15px;
+    color: #343a40;
+    letter-spacing: .4px;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+.reservation-message p a {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 @keyframes background-size {
