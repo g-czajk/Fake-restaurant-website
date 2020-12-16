@@ -297,7 +297,7 @@ section.gallery .carousel-wrap .dots i {
 /* SECTION MENU RESTAURANT */
 
 section.menu-restaurant {
-    padding: 40px 20px;
+    padding: 40px 25px;
 }
 
 section.menu-restaurant .menu-logo-wrap {
@@ -308,7 +308,7 @@ section.menu-restaurant .menu-logo-wrap {
 section.menu-restaurant .menu-logo-wrap img {
     display: block;
     margin: 0 auto;
-    width: 70%;
+    width: 65%;
 }
 
 section.menu-restaurant h2 {
@@ -316,17 +316,63 @@ section.menu-restaurant h2 {
     text-align: center;
 }
 
-section.menu-restaurant .meal-category {
-    margin-top: 20px;
+.menu-category {
+    margin-top: 50px;
 }
 
-section.menu-restaurant .meal-category h3 {
-    font-size: 15px;
+.menu-items {
+    height: 0;
+    overflow: hidden;
+    transition: .7s ease-in-out;
+}
+
+.menu-category h3 {
+    font-size: 16px;
     color: #343a40;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.4em;
     letter-spacing: .4px;
+    font-weight: normal;
+}
+
+.menu-category h3 i {
+    margin-left: 7px;
+    font-size: 16px;
+    transform: translateY(10%);
+    transition: .3s;
+}
+
+.menu-category h3 i.rotate {
+    transform: rotate(180deg);
+}
+
+.menu-item {
+    margin-top: 30px;
+}
+
+.menu-item-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-ingredients {
+    margin-top: 5px;
+}
+
+.ingredients {
+    padding-right: 40px;
+}
+
+.menu-item p {
+    font-size: 15px;
+    color: #343a40;
+    letter-spacing: .4px;
+}
+
+.menu-item-description-name {
+    font-size: 16px;
+    color: #343a40;
 }
 
 @keyframes background-size {

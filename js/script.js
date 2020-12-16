@@ -114,3 +114,34 @@ function clickArrow(event) {
 arrows.forEach(function (arrow) {
     arrow.addEventListener('click', clickArrow);
 })
+
+// MENU CATEGORY SLIDE DOWN
+
+const menuCategoryH3 = [...document.querySelectorAll('.menu-category h3')];
+
+function showMenuCategory(event) {
+
+    let menuCategoryList;
+    let arrowIcon;
+
+    if (!event.target.nextElementSibling) {
+        menuCategoryList = event.target.parentNode.nextElementSibling;
+        arrowIcon = event.target;
+    } else {
+        menuCategoryList = event.target.nextElementSibling;
+        arrowIcon = event.target.firstElementChild;
+    }
+
+    const menuCategoryListScrollHeight = menuCategoryList.scrollHeight;
+    const menuCategoryListClientHeight = menuCategoryList.clientHeight;
+
+    if (!menuCategoryListClientHeight) {
+        menuCategoryList.style.height = `${menuCategoryListScrollHeight}px`;
+    } else {
+        menuCategoryList.style.height = `0px`;
+    }
+
+    arrowIcon.classList.toggle('rotate');
+}
+
+menuCategoryH3.forEach(h3 => h3.addEventListener('click', showMenuCategory));
