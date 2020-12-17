@@ -119,7 +119,15 @@ header .title-wrap .title p {
     width: 100%;
     height: 4px;
     background-color: #fff;
-    transition: top .2s .2s, bottom .2s .2s, opacity .2s, transform .2s;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s, transform .2s, background-color .2s;
+}
+
+.burger.dark span {
+    background-color: #212529;
+}
+
+.burger.dark.active span {
+    background-color: #fff;
 }
 
 .burger span:nth-child(1) {
@@ -195,18 +203,11 @@ nav ul {
 
 nav ul li {
     width: 100%;
-}
-
-nav ul li a {
-    display: block;
-    width: 100%;
-    height: 100%;
     padding: 10px 0;
     font-size: 24px;
     font-weight: bold;
     color: #ccc;
     text-transform: uppercase;
-    text-decoration: none;
     text-align: center;
     letter-spacing: 2px;
 }
@@ -382,7 +383,6 @@ nav ul li a {
     background-image: url(../img/section_menu_bar_background.jpg);
     background-position-x: center;
     background-size: cover;
-    box-shadow: 0 0 4px #000;
 }
 
 .menu.bar h2 {
@@ -434,7 +434,7 @@ nav ul li a {
     margin-top: 25px;
     border: none;
     border-radius: 20px;
-    background-color: #343a40;
+    background-color: #495057;
 }
 
 .reservation-panel button:focus {
@@ -452,7 +452,7 @@ nav ul li a {
 }
 
 .reservation-message {
-    padding: 10px 0;
+    padding: 10px 0 30px 0;
 }
 
 .reservation-message p {
@@ -467,6 +467,116 @@ nav ul li a {
     color: #343a40;
     text-decoration: none;
     font-weight: 500;
+}
+
+/* SECTION CONTACT */
+
+.contact {
+    padding: 40px 0 0 0;
+    box-shadow: 0 0 4px #000;
+    background-color: #212529;
+
+}
+
+.contact h2 {
+    padding: 20px 25px 0 25px;
+    font-size: 30px;
+    color: #F8F9FA;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.contact-data {
+    padding: 0 25px;
+    color: #F8F9FA;
+    text-align: center;
+}
+
+.contact-data-item {
+    margin: 35px 0;
+}
+
+.contact-data-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.contact-data-item p {
+    font-size: 15px;
+    letter-spacing: .4px;
+    line-height: 160%;
+}
+
+.contact-data-item .hours {
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
+.contact-data-item p a {
+    font-size: 12px;
+    color: #F8F9FA;
+    font-weight: 500;
+    letter-spacing: .6px;
+    line-height: 160%;
+    text-decoration: none;
+}
+
+.contact-socials {
+    padding: 20px 25px;
+    text-align: center;
+    background-color: #343A40;
+    z-index: 2;
+}
+
+.contact-socials a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.contact-socials i {
+    font-size: 34px;
+    color: #F8F9FA;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 25px;
+    color: #F8F9FA;
+    text-align: center;
+    background-color: #212529;
+}
+
+footer p {
+    font-size: 13px;
+    letter-spacing: .4px;
+    line-height: 160%;
+}
+
+footer a {
+    color: #F8F9FA;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .8px;
+}
+
+footer .back {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer .disclaimer {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+footer .credits {
+    margin: 20px 0;
 }
 
 @keyframes background-size {

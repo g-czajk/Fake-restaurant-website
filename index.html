@@ -23,7 +23,7 @@
     <!-- HEADER + NAV -->
 
     <div class="header-wrap">
-        <header>
+        <header id="go-to-header">
 
             <div class="logo-wrap"><img src="img/logo_restaurant_new.png" alt="white logo of balley's 42 restaurant">
             </div>
@@ -40,18 +40,18 @@
         <div class="nav-logo-wrap"><img src="img/logo_restaurant_new.png" alt="white logo of balley's 42 restaurant">
         </div>
         <ul>
-            <li><a href="#" class="nav-btn">Home</a></li>
-            <li><a href="#" class="nav-btn">Restaurant</a></li>
-            <li><a href="#" class="nav-btn">Menu</a></li>
-            <li><a href="#" class="nav-btn">Bar</a></li>
-            <li><a href="#" class="nav-btn">Reservations</a></li>
-            <li><a href="#" class="nav-btn">Find us</a></li>
+            <li class="nav-btn go-to-header">Home</li>
+            <li class="nav-btn go-to-about">Restaurant</li>
+            <li class="nav-btn go-to-menu-restaurant">Menu</li>
+            <li class="nav-btn go-to-menu-bar">Bar</li>
+            <li class="nav-btn go-to-reservation">Reservations</li>
+            <li class="nav-btn go-to-contact">Find us</li>
         </ul>
     </nav>
 
     <!-- SECTION ABOUT -->
 
-    <section class="about">
+    <section class="about" id="go-to-about">
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ipsum fuga numquam deserunt magnam.</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor doloribus est distinctio vitae corrupti
             iusto
@@ -87,7 +87,7 @@
 
     <!-- SECTION MENU RESTAURANT -->
 
-    <section class="menu restaurant">
+    <section class="menu restaurant" id="go-to-menu-restaurant">
         <div class="menu-logo-wrap"><img src="../Strona-restauracja/img/logo_restaurant_new_black.png"
                 alt="black logo of balley's 42 restaurant"></div>
         <h2>Menu</h2>
@@ -373,7 +373,7 @@
 
     <!-- SECTION MENU BAR -->
 
-    <section class="menu bar">
+    <section class="menu bar" id="go-to-menu-bar">
         <div class="menu-logo-wrap"><img src="../Strona-restauracja/img/logo_restaurant_new.png"
                 alt="white logo of balley's 42 restaurant"></div>
         <h2>Bar</h2>
@@ -598,23 +598,74 @@
         </div>
     </section>
 
-    <section class="reservation">
+    <!-- SECTION RESERVATION -->
+
+    <section class="reservation" id="go-to-reservation">
         <div class="reservation-panel">
             <h2>Book your table</h2>
             <h3>Provided by tablebook.com</h3>
             <button><a href="#" target="blank">Find a table</a></button>
         </div>
         <div class="reservation-message">
-            <p>Call (123) 456-789 from 9a - 11p daily, or book online with <a href="#" target="blank">tablebook.com</a>.
+            <p>Call (123) 456-789 during open hours or book online with <a href="#" target="blank">tablebook.com</a>.
             </p>
             <p>Reservations required for parties of 8 or more.</p>
         </div>
     </section>
 
-    <section class="contact">
-        <div class="contacts"></div>
-        <div class="socials"></div>
+    <!-- SECTION CONTACT -->
+
+    <section class="contact" id="go-to-contact">
+        <h2>Contact us</h2>
+        <div class="contact-data">
+            <div class="contact-data-item">
+                <h3>Phone:</h3>
+                <p>(123) 456-798</p>
+                <p>(123) 654-321</p>
+            </div>
+            <div class="contact-data-item">
+                <h3>E-mail:</h3>
+                <p>office@bailleys42.lorem</p>
+                <p>reservations@bailleys42.lorem</p>
+            </div>
+            <div class="contact-data-item">
+                <h3>Address:</h3>
+                <p>42, Lorem Street, New York City,
+                    NY, 55000</p>
+                <p><a target="blank" href="https://g.page/washington-square-park?share">(See on Google
+                        Maps)</a></p>
+            </div>
+            <div class="contact-data-item">
+                <h3>Open Hours:</h3>
+                <p>mon-thu: <span class="hours">9a-23p</span></p>
+                <p>fri-sat: <span class="hours">9a-2p</span></p>
+                <p>sun: <span class="hours">10a-22p</span></p>
+            </div>
+        </div>
+
+        <div class="contact-socials"><a target="blank" href="https://www.facebook.com"><i
+                    class="fab fa-facebook-square"></i></a><a target="blank" href="https://www.instagram.com"><i
+                    class="fab fa-instagram"></i></a><a target="blank" href="https://www.twitter.com"><i
+                    class="fab fa-twitter"></i></a><a target="blank" href="https://www.vimeo.com"><i
+                    class="fab fa-vimeo-v"></i></a></div>
     </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="back">Back to top</div>
+        <div class="disclaimer">
+            <p>Please note that all the information presented above is not real. This is just a mock-up website of a
+                non-existing (fake) restaurant, made for a purpose of learning web development.</p>
+        </div>
+        <div class="credits">
+            <p>Photos by <a target="blank" href="https://www.pexels.com">Pexels.com</a></p>
+            <p>Icons by <a target="blank" href="https://www.fontawesome.com">FontAwesome.com</a></p>
+        </div>
+        <div class="signature">
+            <p>Coded by <a target="blank" href="https://github.com/vinxu77">G.Cz.</a>, 2020</p>
+        </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/5ff2b12ca8.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

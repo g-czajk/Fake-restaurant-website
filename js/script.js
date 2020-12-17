@@ -26,7 +26,7 @@ function changeElement() {
 
 setInterval(changeElement, timeChange);
 
-// BURGER MENU 
+// BURGER MENU TOGGLE
 
 const burger = document.querySelector('.burger');
 const navBar = document.querySelector('nav');
@@ -34,9 +34,91 @@ const navBar = document.querySelector('nav');
 function burgerToggle() {
     burger.classList.toggle('active');
     navBar.classList.toggle('show');
-};
+}
 
 burger.addEventListener('click', burgerToggle);
+
+// NAV 
+
+const menuBtn = document.querySelectorAll('.nav-btn');
+const backToTopBtn = document.querySelector('.back');
+
+function scrollToElement(event) {
+    const clickedBtnClass = event.target.classList[1];
+    const clickedSectionId = document.getElementById(clickedBtnClass);
+    clickedSectionId.scrollIntoView({
+        behavior: 'smooth'
+    })
+    burgerToggle();
+}
+
+menuBtn.forEach(function (btn) {
+    btn.addEventListener('click', scrollToElement);
+})
+
+function scrollToTop() {
+    document.querySelector('header').scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+
+backToTopBtn.addEventListener('click', scrollToTop);
+
+// BURGER COLOR CHANGE ON SCROLL
+
+const sectionAbout = document.querySelector('.about');
+const sectionGallery = document.querySelector('.gallery');
+const sectionMenuRestaurant = document.querySelector('.restaurant');
+const sectionMenuBar = document.querySelector('.bar');
+const sectionReservation = document.querySelector('.reservation');
+const sectionContact = document.querySelector('.contact');
+
+function burgerColorChange() {
+    if (window.scrollY < header.clientHeight - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.remove('dark');
+    }
+
+    if (window.scrollY > sectionAbout.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionGallery.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.add('dark');
+    }
+
+    if (window.scrollY > sectionGallery.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionMenuRestaurant.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.remove('dark');
+    }
+
+    if (window.scrollY > sectionMenuRestaurant.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionMenuBar.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.add('dark');
+    }
+
+    if (window.scrollY > sectionMenuBar.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionReservation.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.remove('dark');
+    }
+
+    if (window.scrollY > sectionReservation.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionContact.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.add('dark');
+    }
+
+    if (window.scrollY > sectionContact.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+        burger.classList.remove('dark');
+    }
+
+    console.log('scroll');
+}
+
+// limit scroll event throttling
+
+let scrolling = false;
+
+window.addEventListener('scroll', () => {
+    scrolling = true;
+})
+
+setInterval(() => {
+    if (scrolling) {
+        scrolling = false;
+        burgerColorChange();
+    }
+}, 200);
 
 // GALLERY SLIDER
 
