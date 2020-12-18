@@ -34,9 +34,9 @@ header {
     width: 100%;
     height: 100vh;
     background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
-    background-size: 130%;
+    background-size: 135%;
     color: white;
-    animation: background-size 8s infinite linear alternate, img-change 8s infinite linear;
+    animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
 }
 
 header .logo-wrap {
@@ -52,6 +52,7 @@ header .logo-wrap img {
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
+    max-width: 280px;
     margin: auto;
     z-index: 5;
 }
@@ -156,7 +157,7 @@ header .title-wrap .title p {
     transform: rotate(-45deg);
 }
 
-/* NAV BAR */
+/* NAV */
 
 nav {
     display: none;
@@ -235,9 +236,13 @@ nav ul li {
 /* SECTION GALLERY  */
 
 .gallery {
-    position: relative;
     width: 100%;
     box-shadow: 0 0 4px #000;
+}
+
+.carousel-wrap {
+    position: relative;
+    width: 100%;
 }
 
 .gallery .carousel-wrap img {
@@ -263,6 +268,7 @@ nav ul li {
     position: absolute;
     font-size: 36px;
     color: #fff;
+    cursor: pointer;
 }
 
 .gallery .carousel-wrap span.arrow-back {
@@ -293,6 +299,7 @@ nav ul li {
 
 .gallery .carousel-wrap .dots i {
     margin-right: 4px;
+    cursor: pointer;
 }
 
 /* SECTION MENU RESTAURANT */
@@ -310,12 +317,14 @@ nav ul li {
 .menu .menu-logo-wrap img {
     display: block;
     margin: 0 auto;
-    width: 65%;
+    width: 60%;
+    max-width: 250px;
 }
 
 .menu h2 {
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: .8px;
 }
 
 .menu-category {
@@ -579,9 +588,27 @@ footer .credits {
     margin: 20px 0;
 }
 
-@keyframes background-size {
+@keyframes background-size-mobile-portrait-small {
     100% {
-        background-size: 140%;
+        background-size: 145%;
+    }
+}
+
+@keyframes background-size-mobile-portrait-big {
+    100% {
+        background-size: 120%;
+    }
+}
+
+@keyframes background-size-mobile-horizontal-small {
+    100% {
+        background-size: 110%;
+    }
+}
+
+@keyframes background-size-mobile-horizontal-big {
+    100% {
+        background-size: 130%;
     }
 }
 
@@ -619,4 +646,305 @@ footer .credits {
     100% {
         opacity: .95;
     }
+}
+
+/* >>>> MEDIA QUERIES <<<<*/
+
+/* MOBILE (MIN-W:768px, PORTRAIT) */
+
+@media (min-width: 768px) and (orientation:portrait) {
+
+    /* header */
+
+    header {
+        background-image: url(../img/restaurant_main_mobile_portrait_big_1.jpg);
+        background-size: 110%;
+        animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
+    }
+
+    header .logo-wrap img {
+        width: 40%;
+    }
+
+    header .title-wrap .title {
+        padding: 7% 50px;
+    }
+
+    header .title-wrap .title h1 {
+        margin-bottom: 5px;
+        font-size: 50px;
+    }
+
+    header .title-wrap .title p {
+        font-size: 25px;
+    }
+
+    /* burger menu*/
+
+    .burger {
+        left: 50px;
+        width: 40px;
+        height: 30px;
+    }
+
+    .burger span {
+        height: 5px;
+    }
+
+    /* nav */
+
+    nav .nav-logo-wrap img {
+        width: 40%;
+    }
+
+    nav ul li {
+        font-size: 32px;
+    }
+
+    /* section about */
+
+    .about {
+        padding: 60px 50px;
+    }
+
+    /* section gallery */
+
+    .gallery .carousel-wrap span {
+        font-size: 42px;
+    }
+
+    /* section menu restaurant + section menu bar */
+
+    .menu {
+        padding: 60px 80px;
+    }
+
+    .menu .menu-logo-wrap img {
+        width: 50%;
+    }
+
+    /* section reservation  */
+
+    .reservation {
+        padding: 50px 50px;
+    }
+
+    .reservation-message p {
+        padding: 0 120px;
+    }
+}
+
+/* MOBILE (MIN-W: 520px, LANDSCAPE) */
+
+@media (min-width: 520px) and (orientation:landscape) {
+
+    /* header */
+
+    header {
+        background-image: url(../img/restaurant_main_mobile_horizontal_small_1.jpg);
+        background-size: 100%;
+        animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
+    }
+
+    header .logo-wrap img {
+        width: 30%;
+        max-width: 280px;
+    }
+
+    header .title-wrap .title {
+        padding: 5% 40px;
+    }
+
+    header .title-wrap .title.position-1 {
+        top: 20%;
+    }
+
+    header .title-wrap .title.position-2 {
+        top: 28%;
+    }
+
+    header .title-wrap .title.position-3 {
+        top: 30%;
+    }
+
+    /* burger menu */
+
+    .burger {
+        top: 8vh;
+        left: 40px;
+    }
+
+    /* nav */
+
+    nav .nav-logo-wrap img {
+        width: 25%;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        padding-bottom: 3%;
+    }
+
+    nav ul li {
+        padding: 5px 0;
+        font-size: 20px;
+    }
+
+    /* section about */
+
+    .about {
+        padding: 40px 40px;
+    }
+
+    /* section gallery  */
+
+    .gallery {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .carousel-wrap {
+        margin: 0 auto;
+        width: 62%;
+    }
+
+    .gallery .carousel-wrap img {
+        box-shadow: 0 0 4px #000;
+    }
+
+    /* section menu restaurant + section menu bar */
+
+    .menu {
+        padding: 40px 40px;
+        box-shadow: none;
+    }
+
+    .menu .menu-logo-wrap img {
+        width: 40%;
+        max-width: 250px;
+    }
+
+    .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-item {
+        width: 45%;
+    }
+
+    /* section menu bar */
+
+    .menu.bar {
+        box-shadow: 0 0 4px #000;
+    }
+
+    /* section reservation  */
+
+    .reservation {
+        padding: 20px 40px;
+    }
+
+    .reservation-message p {
+        padding: 0 100px;
+    }
+
+    /* section contact */
+
+    .contact {
+        padding: 20px 0 0 0;
+    }
+
+    .contact-data {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    .contact-data-item {
+        width: 40%;
+        margin: 20px 0;
+    }
+}
+
+/* MOBILE (MIN-W: 900px, LANDSCAPE) */
+
+@media (min-width: 900px) and (orientation:landscape) {
+
+    /* header */
+
+    header {
+        background-image: url(../img/restaurant_main_mobile_horizontal_big_1.jpg);
+        background-size: 120%;
+        animation: background-size-mobile-horizontal-big 8s infinite linear alternate, img-change 8s infinite linear;
+    }
+
+    header .title-wrap .title h1 {
+        font-size: 52px;
+    }
+
+    header .title-wrap .title p {
+        font-size: 26px;
+    }
+
+    /* burger menu */
+
+    .burger {
+        width: 40px;
+        height: 30px;
+    }
+
+    /* nav */
+
+    nav .nav-logo-wrap img {
+        width: 30%;
+        max-width: 280px;
+    }
+
+    nav ul {
+        padding-top: 100px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        font-size: 32px;
+    }
+
+    /* section about */
+
+    .about {
+        padding: 60px 120px;
+    }
+
+    /* section gallery */
+
+    .carousel-wrap {
+        width: 50%;
+    }
+
+    /* section menu restaurant + section menu bar */
+
+    .menu {
+        padding: 60px 120px;
+    }
+
+    /* section reservation  */
+
+    .reservation {
+        padding: 40px 40px;
+    }
+
+    /* section contact */
+
+    .contact-data {
+        padding: 40px 80px;
+    }
+
+    footer {
+        padding: 40px 100px
+    }
+
 }

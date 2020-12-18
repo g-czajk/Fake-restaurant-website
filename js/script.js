@@ -18,13 +18,39 @@ function changeElement() {
     if (activeElement == titleH1Change.length) {
         activeElement = 0;
     }
-    header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_portrait_small_${activeElement + 1}.jpg)`;
+
+    if (window.innerWidth < 768 && window.innerWidth < window.innerHeight) {
+        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_portrait_small_${activeElement + 1}.jpg)`;
+    }
+
+    if (window.innerWidth >= 768 && window.innerWidth < window.innerHeight) {
+        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_portrait_big_${activeElement + 1}.jpg)`;
+    }
+
+    if (window.innerWidth >= 520 && window.innerWidth < 900 && window.innerWidth > window.innerHeight) {
+        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_horizontal_small_${activeElement + 1}.jpg)`;
+    }
+
+    if (window.innerWidth >= 900 && window.innerWidth > window.innerHeight) {
+        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_horizontal_big_${activeElement + 1}.jpg)`;
+    }
+
     titleH1.textContent = titleH1Change[activeElement];
     titleParagraph.textContent = titleParagraphChange[activeElement];
     title.className = `title ${titleMove[activeElement]}`;
 }
 
 setInterval(changeElement, timeChange);
+
+// reload page on resize on mobile devices
+
+// if (window.innerWidth <= 1024) {
+
+//     window.addEventListener('resize', function () {
+//         location.reload();
+//     })
+// }
+
 
 // BURGER MENU TOGGLE
 
@@ -82,8 +108,10 @@ function burgerColorChange() {
         burger.classList.add('dark');
     }
 
-    if (window.scrollY > sectionGallery.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionMenuRestaurant.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
-        burger.classList.remove('dark');
+    if (window.innerWidth < window.innerHeight) {
+        if (window.scrollY > sectionGallery.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionMenuRestaurant.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
+            burger.classList.remove('dark');
+        }
     }
 
     if (window.scrollY > sectionMenuRestaurant.offsetTop - (burger.clientHeight / 2 + burger.offsetTop) && window.scrollY < sectionMenuBar.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
@@ -101,8 +129,6 @@ function burgerColorChange() {
     if (window.scrollY > sectionContact.offsetTop - (burger.clientHeight / 2 + burger.offsetTop)) {
         burger.classList.remove('dark');
     }
-
-    console.log('scroll');
 }
 
 // limit scroll event throttling
@@ -214,16 +240,14 @@ function showMenuCategory(event) {
         arrowIcon = event.target.firstElementChild;
     }
 
-    const menuCategoryListScrollHeight = menuCategoryList.scrollHeight;
-    const menuCategoryListClientHeight = menuCategoryList.clientHeight;
-
-    if (!menuCategoryListClientHeight) {
-        menuCategoryList.style.height = `${menuCategoryListScrollHeight}px`;
+    if (!menuCategoryList.clientHeight) {
+        menuCategoryList.style.height = `${menuCategoryList.scrollHeight}px`;
+        arrowIcon.classList.add('rotate');
     } else {
         menuCategoryList.style.height = `0px`;
+        arrowIcon.classList.remove('rotate');
     }
 
-    arrowIcon.classList.toggle('rotate');
 }
 
 menuCategoryH3.forEach(h3 => h3.addEventListener('click', showMenuCategory));
