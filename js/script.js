@@ -35,6 +35,10 @@ function changeElement() {
         header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_horizontal_big_${activeElement + 1}.jpg)`;
     }
 
+    if (window.innerWidth >= 1025 && window.innerWidth > window.innerHeight) {
+        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_desktop_${activeElement + 1}.jpg)`;
+    }
+
     titleH1.textContent = titleH1Change[activeElement];
     titleParagraph.textContent = titleParagraphChange[activeElement];
     title.className = `title ${titleMove[activeElement]}`;

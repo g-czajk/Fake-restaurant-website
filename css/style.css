@@ -39,14 +39,12 @@ header {
     animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
 }
 
-header .logo-wrap {
-    display: flex;
+.logo-wrap {
     width: 100%;
     height: 25%;
-    background-color: #00000044;
 }
 
-header .logo-wrap img {
+.logo-wrap img {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -59,9 +57,7 @@ header .logo-wrap img {
 
 header .title-wrap {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 75%;
+    height: 100%;
     background-color: #00000044;
 }
 
@@ -69,19 +65,19 @@ header .title-wrap .title {
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 7% 20px;
+    padding: 0 20px;
 }
 
 header .title-wrap .title.position-1 {
-    top: 25%;
+    top: 48%;
 }
 
 header .title-wrap .title.position-2 {
-    top: 38%;
+    top: 60%;
 }
 
 header .title-wrap .title.position-3 {
-    top: 34%;
+    top: 62%;
     text-align: right;
 }
 
@@ -103,7 +99,6 @@ header .title-wrap .title p {
     left: 20px;
     width: 35px;
     height: 26px;
-    cursor: pointer;
     transition: .2s;
     z-index: 1;
     animation: show 2s 2.5s ease both;
@@ -207,7 +202,7 @@ nav ul li {
     padding: 10px 0;
     font-size: 24px;
     font-weight: bold;
-    color: #ccc;
+    color: #CED4DA;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px;
@@ -268,7 +263,6 @@ nav ul li {
     position: absolute;
     font-size: 36px;
     color: #fff;
-    cursor: pointer;
 }
 
 .gallery .carousel-wrap span.arrow-back {
@@ -299,7 +293,6 @@ nav ul li {
 
 .gallery .carousel-wrap .dots i {
     margin-right: 4px;
-    cursor: pointer;
 }
 
 /* SECTION MENU RESTAURANT */
@@ -612,6 +605,12 @@ footer .credits {
     }
 }
 
+@keyframes background-size-desktop {
+    100% {
+        background-size: auto 115%;
+    }
+}
+
 @keyframes img-change {
     0% {
         opacity: 0;
@@ -662,12 +661,12 @@ footer .credits {
         animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
-    header .logo-wrap img {
+    .logo-wrap img {
         width: 40%;
     }
 
     header .title-wrap .title {
-        padding: 7% 50px;
+        padding: 0 50px;
     }
 
     header .title-wrap .title h1 {
@@ -678,6 +677,7 @@ footer .credits {
     header .title-wrap .title p {
         font-size: 25px;
     }
+
 
     /* burger menu*/
 
@@ -746,25 +746,25 @@ footer .credits {
         animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
-    header .logo-wrap img {
+    .logo-wrap img {
         width: 30%;
         max-width: 280px;
     }
 
     header .title-wrap .title {
-        padding: 5% 40px;
+        padding: 0 40px;
     }
 
     header .title-wrap .title.position-1 {
-        top: 20%;
+        top: 50%;
     }
 
     header .title-wrap .title.position-2 {
-        top: 28%;
+        top: 55%;
     }
 
     header .title-wrap .title.position-3 {
-        top: 30%;
+        top: 52%;
     }
 
     /* burger menu */
@@ -945,6 +945,123 @@ footer .credits {
 
     footer {
         padding: 40px 100px
+    }
+
+}
+
+/* DESKTOP (MIN-W: 1025px, LANDSCAPE) */
+
+@media (min-width: 1025px) and (orientation:landscape) {
+
+    /* header */
+
+    header {
+        background-image: url(../img/restaurant_main_desktop_1.jpg);
+        background-size: auto 110%;
+        background-position-x: center;
+        animation: background-size-desktop 8s infinite linear alternate, img-change 8s infinite linear;
+    }
+
+    header .title-wrap .title {
+        padding: 0 160px;
+    }
+
+    header .title-wrap .title h1 {
+        font-size: 56px;
+    }
+
+    header .title-wrap .title p {
+        font-size: 28px;
+    }
+
+    header .title-wrap .title.position-1 {
+        top: 57%;
+    }
+
+    header .title-wrap .title.position-2 {
+        top: 61%;
+    }
+
+    header .title-wrap .title.position-3 {
+        top: 55%;
+    }
+
+    /* burger menu */
+
+    .burger {
+        display: none;
+    }
+
+    /* nav */
+
+    nav {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: transparent;
+        z-index: 0;
+        opacity: 1;
+        transition: .5s;
+    }
+
+    nav.follow {
+        position: fixed;
+        top: 0;
+    }
+
+    nav.follow.after-header {
+        height: 60px;
+        box-shadow: 0 0 4px #000;
+        font-size: 22px;
+        background-color: #000000cc;
+        z-index: 100;
+    }
+
+    nav.follow.after-header li:hover {
+        color: #CED4DA;
+        transform: none;
+    }
+
+    nav .nav-logo-wrap {
+        display: none;
+    }
+
+    nav .nav-logo-wrap img {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        width: auto;
+        height: 50%;
+        margin: 0 10px;
+        padding: 30px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+
+    nav ul li:hover {
+        color: #CED4DA;
+        transform: scale(.9);
     }
 
 }
