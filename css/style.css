@@ -748,7 +748,7 @@ footer .credits {
 
     .logo-wrap img {
         width: 30%;
-        max-width: 280px;
+        max-width: 250px;
     }
 
     header .title-wrap .title {
@@ -900,7 +900,7 @@ footer .credits {
 
     nav .nav-logo-wrap img {
         width: 30%;
-        max-width: 280px;
+        max-width: 250px;
     }
 
     nav ul {
@@ -963,15 +963,7 @@ footer .credits {
     }
 
     header .title-wrap .title {
-        padding: 0 160px;
-    }
-
-    header .title-wrap .title h1 {
-        font-size: 56px;
-    }
-
-    header .title-wrap .title p {
-        font-size: 28px;
+        padding: 0 100px;
     }
 
     header .title-wrap .title.position-1 {
@@ -1004,24 +996,25 @@ footer .credits {
         background-color: transparent;
         z-index: 0;
         opacity: 1;
-        transition: .5s;
     }
 
     nav.follow {
         position: fixed;
         top: 0;
-    }
-
-    nav.follow.after-header {
         height: 60px;
         box-shadow: 0 0 4px #000;
-        font-size: 22px;
         background-color: #000000cc;
         z-index: 100;
+        text-shadow: none;
     }
 
-    nav.follow.after-header li:hover {
-        color: #CED4DA;
+    nav.follow ul li {
+        font-size: 22px;
+        text-shadow: none;
+    }
+
+    nav.follow li:hover {
+        color: #aaa;
         transform: none;
     }
 
@@ -1044,6 +1037,7 @@ footer .credits {
     }
 
     nav ul li {
+        position: relative;
         display: flex;
         align-items: center;
         align-self: center;
@@ -1051,10 +1045,11 @@ footer .credits {
         height: 50%;
         margin: 0 10px;
         padding: 30px 20px;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: bold;
         color: #fff;
         text-align: center;
+        text-shadow: 1px 1px 4px #000;
         cursor: pointer;
         transition: .2s linear;
     }
@@ -1062,6 +1057,168 @@ footer .credits {
     nav ul li:hover {
         color: #CED4DA;
         transform: scale(.9);
+    }
+
+    /* section about & gallery wrap */
+
+    .about-and-gallery-wrap {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* section about */
+
+    .about {
+        padding: 100px 40px 0 40px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    /* section gallery */
+
+    .gallery {
+        display: flex;
+        align-items: center;
+        padding: 80px 40px 0 40px;
+    }
+
+    .carousel-wrap {
+        width: 370px;
+    }
+
+    .gallery .carousel-wrap img {
+        width: 100%;
+    }
+
+    .gallery .carousel-wrap span {
+        cursor: pointer;
+    }
+
+    .gallery .carousel-wrap .dots i {
+        cursor: pointer;
+    }
+
+    /* section menu restaurant */
+
+    .menu h2 {
+        padding-top: 20px;
+        font-size: 28px;
+    }
+
+    .menu-items {
+        max-width: 1400px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 40px;
+        justify-content: flex-start;
+        transition: 1.5s .1s;
+        opacity: 0;
+    }
+
+    .menu-items.visible {
+        opacity: 1;
+    }
+
+    .menu-category h3 {
+        font-size: 17px;
+    }
+
+    .menu-category h3 i {
+        display: none;
+    }
+
+    .menu-item {
+        width: 33.33%;
+        padding-right: 50px;
+    }
+
+    /* section menu bar */
+
+    .menu.bar {
+        background-image: url(../img/section_menu_bar_background_desktop.jpg);
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    /* section reservation */
+
+    .reservation-panel h2 {
+        font-size: 42px;
+    }
+
+    .reservation-panel h3 {
+        padding: 10px 0;
+        font-size: 11px;
+    }
+
+    .reservation-panel button a {
+        font-size: 14px;
+    }
+
+    /* section contact */
+
+    .contact h2 {
+        font-size: 34px;
+    }
+
+    .contact-data {
+        max-width: 900px;
+        padding: 20px 40px;
+        margin: 0 auto;
+    }
+
+    /* footer */
+
+    footer p {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 13.5px;
+    }
+
+    footer .back {
+        cursor: pointer;
+    }
+
+}
+
+@media (min-width: 1300px) and (orientation:landscape) {
+
+    /* nav */
+
+    nav ul li {
+        font-size: 24px;
+    }
+
+}
+
+@media (min-width: 1600px) and (orientation:landscape) {
+
+    /* header */
+
+    .logo-wrap img {
+        max-width: 280px;
+    }
+
+    header .title-wrap .title {
+        padding: 0 160px;
+    }
+
+    header .title-wrap .title h1 {
+        font-size: 56px;
+    }
+
+    header .title-wrap .title p {
+        font-size: 28px;
+    }
+
+    /* nav */
+
+    nav ul li {
+        font-size: 26px;
     }
 
 }

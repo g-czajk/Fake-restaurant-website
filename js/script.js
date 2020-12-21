@@ -79,7 +79,9 @@ function scrollToElement(event) {
     clickedSectionId.scrollIntoView({
         behavior: 'smooth'
     })
-    burgerToggle();
+    if (window.innerWidth <= 1024) {
+        burgerToggle();
+    }
 }
 
 menuBtn.forEach(function (btn) {
@@ -135,20 +137,19 @@ function burgerColorChange() {
     }
 }
 
-// limit scroll event throttling
+// DESKTOP NAV STICK TO TOP 
 
-let scrolling = false;
+const initialNavBarOffsetTop = navBar.offsetTop;
 
-window.addEventListener('scroll', () => {
-    scrolling = true;
-})
-
-setInterval(() => {
-    if (scrolling) {
-        scrolling = false;
-        burgerColorChange();
+function navFollow() {
+    if (window.scrollY >= navBar.offsetTop) {
+        navBar.classList.add('follow');
     }
-}, 200);
+
+    if (window.scrollY < initialNavBarOffsetTop) {
+        navBar.classList.remove('follow');
+    }
+}
 
 // GALLERY SLIDER
 
@@ -227,7 +228,7 @@ arrows.forEach(function (arrow) {
     arrow.addEventListener('click', clickArrow);
 })
 
-// MENU CATEGORY SLIDE DOWN
+// MENU CATEGORY SLIDE DOWN ON MOBILE DEVICES
 
 const menuCategoryH3 = [...document.querySelectorAll('.menu-category h3')];
 
@@ -251,7 +252,39 @@ function showMenuCategory(event) {
         menuCategoryList.style.height = `0px`;
         arrowIcon.classList.remove('rotate');
     }
-
 }
 
-menuCategoryH3.forEach(h3 => h3.addEventListener('click', showMenuCategory));
+if (window.innerWidth <= 1024) {
+    menuCategoryH3.forEach(h3 => h3.addEventListener('click', showMenuCategory));
+}
+
+// MENU CATEGORY SHOW ON DESKTOP DEVICES
+
+const menuContainer = [...document.querySelectorAll('.menu-items')];
+
+function showMenuContainerOnScroll() {
+    for (let i = 0; i < menuContainer.length; i++) {
+        if (window.scrollY >= menuContainer[i].offsetTop - window.innerHeight + 40) {
+            menuContainer[i].classList.add('visible');
+        }
+    }
+}
+
+// limit scroll event throttling + trigger functions on scroll event
+
+let scrolling = false;
+
+window.addEventListener('scroll', () => {
+    scrolling = true;
+})
+
+setInterval(() => {
+    if (scrolling) {
+        scrolling = false;
+        burgerColorChange();
+        if (window.innerWidth > 1024) {
+            navFollow();
+            showMenuContainerOnScroll();
+        }
+    }
+}, 200);
