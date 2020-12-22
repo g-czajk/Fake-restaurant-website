@@ -9,7 +9,7 @@ const titleH1 = document.querySelector('.title h1');
 const titleParagraph = document.querySelector('.title p');
 
 
-const titleH1Change = ['Place', 'Food', 'Excellence'];
+const titleH1Change = ['Lorem', 'Ipsum', 'Explicabo'];
 const titleParagraphChange = ['Quos optio saepe enim facilis rem.', 'Lorem, ipsum dolor sit amet consectetur adipisicing.', 'Iste quae asperiores magnam explicabo.'];
 const titleMove = ['position-1', 'position-2', 'position-3'];
 
@@ -48,12 +48,12 @@ setInterval(changeElement, timeChange);
 
 // reload page on resize on mobile devices
 
-// if (window.innerWidth <= 1024) {
+if (window.innerWidth <= 1024) {
 
-//     window.addEventListener('resize', function () {
-//         location.reload();
-//     })
-// }
+    window.addEventListener('resize', function () {
+        location.reload();
+    })
+}
 
 
 // BURGER MENU TOGGLE
@@ -68,7 +68,7 @@ function burgerToggle() {
 
 burger.addEventListener('click', burgerToggle);
 
-// NAV 
+// NAV SCROLL TO SECTION
 
 const menuBtn = document.querySelectorAll('.nav-btn');
 const backToTopBtn = document.querySelector('.back');
@@ -137,7 +137,7 @@ function burgerColorChange() {
     }
 }
 
-// DESKTOP NAV STICK TO TOP 
+// NAV STICK TO WINDOW TOP ON DESKTOP DEVICES
 
 const initialNavBarOffsetTop = navBar.offsetTop;
 

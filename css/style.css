@@ -83,12 +83,12 @@ header .title-wrap .title.position-3 {
 
 header .title-wrap .title h1 {
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 38px;
     z-index: 1;
 }
 
 header .title-wrap .title p {
-    font-size: 20px;
+    font-size: 19px;
 }
 
 /* BURGER MENU  */
@@ -184,6 +184,7 @@ nav .nav-logo-wrap img {
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
+    max-width: 280px;
     margin: auto;
     z-index: 5;
 }
@@ -382,9 +383,10 @@ nav ul li {
 /* SECTION MENU BAR */
 
 .menu.bar {
-    background-image: url(../img/section_menu_bar_background.jpg);
-    background-position-x: center;
+    background-image: url(../img/section_menu_bar_background_mobile_portrait_small.jpg);
     background-size: cover;
+    background-position-x: center;
+    /* background-attachment: fixed; */
 }
 
 .menu.bar h2 {
@@ -671,11 +673,11 @@ footer .credits {
 
     header .title-wrap .title h1 {
         margin-bottom: 5px;
-        font-size: 50px;
+        font-size: 52px;
     }
 
     header .title-wrap .title p {
-        font-size: 25px;
+        font-size: 26px;
     }
 
 
@@ -721,6 +723,10 @@ footer .credits {
 
     .menu .menu-logo-wrap img {
         width: 50%;
+    }
+
+    .menu.bar {
+        background-image: url(../img/section_menu_bar_background_mobile_portrait_big.jpg);
     }
 
     /* section reservation  */
@@ -838,6 +844,7 @@ footer .credits {
 
     .menu.bar {
         box-shadow: 0 0 4px #000;
+        background-image: url(../img/section_menu_bar_background_mobile_horizontal.jpg);
     }
 
     /* section reservation  */
@@ -1141,7 +1148,7 @@ footer .credits {
     .menu.bar {
         background-image: url(../img/section_menu_bar_background_desktop.jpg);
         background-size: cover;
-        background-position-x: center;
+        /* background-attachment: scroll; */
     }
 
     /* section reservation */
@@ -1221,4 +1228,12 @@ footer .credits {
         font-size: 26px;
     }
 
+}
+
+/* FIREFOX HEADER BACKGROUND-IMAGE ANIMATION BUG FIX */
+
+@supports (-moz-appearance:none) {
+    header {
+        animation: img-change 8s infinite linear;
+    }
 }
