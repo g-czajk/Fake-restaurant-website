@@ -46,16 +46,6 @@ function changeElement() {
 
 setInterval(changeElement, timeChange);
 
-// reload page on resize on mobile devices
-
-if (window.innerWidth <= 1024) {
-
-    window.addEventListener('resize', function () {
-        location.reload();
-    })
-}
-
-
 // BURGER MENU TOGGLE
 
 const burger = document.querySelector('.burger');
@@ -270,7 +260,7 @@ function showMenuContainerOnScroll() {
     }
 }
 
-// limit scroll event throttling + trigger functions on scroll event
+// LIMIT SCROLL EVENT THROTTLING + TRIGGER ON-SCROLL FUNCTIONS
 
 let scrolling = false;
 
@@ -288,3 +278,22 @@ setInterval(() => {
         }
     }
 }, 200);
+
+// SET HEIGHT OF GALLERY SLIDER 
+
+const carousel = document.querySelector('.carousel-wrap');
+
+function carouselHeightSet() {
+    carousel.style.height = `${galleryImage[0].clientHeight}px`;
+}
+
+carouselHeightSet()
+
+// RELOAD PAGE ON FLIP ON MOBILE DEVICES (TO ADJUST SIZE OF IMAGES AND GALLERY SLIDER HEIGHT)
+
+if (window.innerWidth <= 1024) {
+
+    window.addEventListener('resize', function () {
+        location.reload();
+    })
+}

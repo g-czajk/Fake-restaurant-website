@@ -243,6 +243,8 @@ nav ul li {
 
 .gallery .carousel-wrap img {
     display: block;
+    position: absolute;
+    top: 0;
     width: 100%;
     opacity: 0;
     transition: 1s;
@@ -250,20 +252,19 @@ nav ul li {
 
 .gallery .carousel-wrap img.visible {
     opacity: 1;
+    z-index: 10;
 }
 
-.gallery .carousel-wrap img.carousel-picture-2,
+/* .gallery .carousel-wrap img.carousel-picture-2,
 .gallery .carousel-wrap img.carousel-picture-3,
-.gallery .carousel-wrap img.carousel-picture-4 {
-    position: absolute;
-    top: 0;
-}
+.gallery .carousel-wrap img.carousel-picture-4 {} */
 
 .gallery .carousel-wrap span {
     display: block;
     position: absolute;
     font-size: 36px;
     color: #fff;
+    z-index: 11;
 }
 
 .gallery .carousel-wrap span.arrow-back {
@@ -286,10 +287,11 @@ nav ul li {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 25%;
     height: 10%;
     font-size: 13px;
     color: white;
+    z-index: 11;
 }
 
 .gallery .carousel-wrap .dots i {
@@ -1097,16 +1099,26 @@ footer .credits {
         width: 370px;
     }
 
+    .gallery .carousel-wrap span:hover {
+        opacity: .7;
+    }
+
     .gallery .carousel-wrap img {
         width: 100%;
     }
 
     .gallery .carousel-wrap span {
         cursor: pointer;
+        transition: .2s;
     }
 
     .gallery .carousel-wrap .dots i {
         cursor: pointer;
+        transition: opacity .2s;
+    }
+
+    .gallery .carousel-wrap .dots i:hover {
+        opacity: .7;
     }
 
     /* section menu restaurant */
