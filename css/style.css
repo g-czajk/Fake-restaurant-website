@@ -8,17 +8,23 @@
 
 :root {
     --fontFamily: 'Raleway', sans-serif;
+    --white: #fff;
+    --mainColorLight: #f8f9fA;
+    --mainColorLightGrey: #ced4dA;
+    --mainColorDarkGrey: #343a40;
+    --mainColorDark: #212529;
+    --black: #000;
 }
 
 body {
     font-family: var(--fontFamily);
-    background-color: #F8F9FA;
+    background-color: var(--mainColorLight);
     background-position: center;
 }
 
 h2 {
     font-size: 26px;
-    color: #212529;
+    color: var(--mainColorDark);
     font-weight: 600;
     line-height: 1.5em;
 }
@@ -26,8 +32,8 @@ h2 {
 /* HEADER */
 
 .header-wrap {
-    background-color: #000;
-    box-shadow: 0 0 4px #000;
+    background-color: var(--black);
+    box-shadow: 0 0 4px var(--black);
 }
 
 header {
@@ -35,7 +41,7 @@ header {
     height: 100vh;
     background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
     background-size: 135%;
-    color: white;
+    color: var(--white);
     animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
 }
 
@@ -114,16 +120,16 @@ header .title-wrap .title p {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #fff;
+    background-color: var(--white);
     transition: top .2s .2s, bottom .2s .2s, opacity .2s, transform .2s, background-color .2s;
 }
 
 .burger.dark span {
-    background-color: #212529;
+    background-color: var(--mainColorDark);
 }
 
 .burger.dark.active span {
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .burger span:nth-child(1) {
@@ -161,7 +167,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    background-color: var(--black);
     z-index: 98;
     opacity: 0;
 }
@@ -203,7 +209,7 @@ nav ul li {
     padding: 10px 0;
     font-size: 24px;
     font-weight: bold;
-    color: #CED4DA;
+    color: var(--mainColorLightGrey);
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px;
@@ -218,7 +224,7 @@ nav ul li {
 .about p {
     margin: 20px 0;
     font-size: 15px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     letter-spacing: .4px;
     line-height: 1.6em;
 }
@@ -233,7 +239,7 @@ nav ul li {
 
 .gallery {
     width: 100%;
-    box-shadow: 0 0 4px #000;
+    box-shadow: 0 0 4px var(--black);
 }
 
 .carousel-wrap {
@@ -255,15 +261,11 @@ nav ul li {
     z-index: 10;
 }
 
-/* .gallery .carousel-wrap img.carousel-picture-2,
-.gallery .carousel-wrap img.carousel-picture-3,
-.gallery .carousel-wrap img.carousel-picture-4 {} */
-
 .gallery .carousel-wrap span {
     display: block;
     position: absolute;
     font-size: 36px;
-    color: #fff;
+    color: var(--white);
     z-index: 11;
 }
 
@@ -290,7 +292,7 @@ nav ul li {
     width: 25%;
     height: 10%;
     font-size: 13px;
-    color: white;
+    color: var(--white);
     z-index: 11;
 }
 
@@ -302,7 +304,7 @@ nav ul li {
 
 .menu {
     padding: 40px 25px;
-    box-shadow: 0 0 4px #000;
+    box-shadow: 0 0 4px var(--black);
 }
 
 .menu .menu-logo-wrap {
@@ -335,7 +337,7 @@ nav ul li {
 
 .menu-category h3 {
     font-size: 16px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.4em;
@@ -373,13 +375,13 @@ nav ul li {
 
 .menu-item p {
     font-size: 15px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     letter-spacing: .4px;
 }
 
 .menu-item-description-name {
     font-size: 16px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
 }
 
 /* SECTION MENU BAR */
@@ -392,19 +394,19 @@ nav ul li {
 }
 
 .menu.bar h2 {
-    color: #fff;
+    color: var(--white);
 }
 
 .bar .menu-category h3 {
-    color: #fff;
+    color: var(--white);
 }
 
 .bar .menu-item p {
-    color: #fff;
+    color: var(--white);
 }
 
 .bar .menu-item-description-name {
-    color: #fff;
+    color: var(--white);
 }
 
 /* SECTION RESERVATION */
@@ -430,7 +432,7 @@ nav ul li {
 
 .reservation-panel h3 {
     font-size: 10px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     line-height: 100%;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -440,7 +442,7 @@ nav ul li {
     margin-top: 25px;
     border: none;
     border-radius: 20px;
-    background-color: #495057;
+    background-color: var(--mainColorDarkGrey);
 }
 
 .reservation-panel button:focus {
@@ -450,9 +452,10 @@ nav ul li {
 .reservation-panel button a {
     display: block;
     padding: 14px 30px;
+    border-radius: 20px;
     font-family: var(--fontFamily);
     font-size: 13px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     text-decoration: none;
     height: 100%;
 }
@@ -463,14 +466,14 @@ nav ul li {
 
 .reservation-message p {
     font-size: 15px;
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     letter-spacing: .4px;
     line-height: 1.6em;
     text-align: center;
 }
 
 .reservation-message p a {
-    color: #343a40;
+    color: var(--mainColorDarkGrey);
     text-decoration: none;
     font-weight: 500;
 }
@@ -479,15 +482,15 @@ nav ul li {
 
 .contact {
     padding: 40px 0 0 0;
-    box-shadow: 0 0 4px #000;
-    background-color: #212529;
+    box-shadow: 0 0 4px var(--black);
+    background-color: var(--mainColorDark);
 
 }
 
 .contact h2 {
     padding: 20px 25px 0 25px;
     font-size: 30px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
@@ -495,7 +498,7 @@ nav ul li {
 
 .contact-data {
     padding: 0 25px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     text-align: center;
 }
 
@@ -523,7 +526,7 @@ nav ul li {
 
 .contact-data-item p a {
     font-size: 12px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     font-weight: 500;
     letter-spacing: .6px;
     line-height: 160%;
@@ -533,7 +536,7 @@ nav ul li {
 .contact-socials {
     padding: 20px 25px;
     text-align: center;
-    background-color: #343A40;
+    background-color: var(--mainColorDarkGrey);
     z-index: 2;
 }
 
@@ -544,7 +547,7 @@ nav ul li {
 
 .contact-socials i {
     font-size: 34px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     text-align: center;
 }
 
@@ -552,9 +555,9 @@ nav ul li {
 
 footer {
     padding: 40px 25px;
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     text-align: center;
-    background-color: #212529;
+    background-color: var(--mainColorDark);
 }
 
 footer p {
@@ -564,7 +567,7 @@ footer p {
 }
 
 footer a {
-    color: #F8F9FA;
+    color: var(--mainColorLight);
     font-weight: 700;
     text-decoration: none;
     letter-spacing: .8px;
@@ -681,7 +684,6 @@ footer .credits {
     header .title-wrap .title p {
         font-size: 26px;
     }
-
 
     /* burger menu*/
 
@@ -817,7 +819,7 @@ footer .credits {
     }
 
     .gallery .carousel-wrap img {
-        box-shadow: 0 0 4px #000;
+        box-shadow: 0 0 4px var(--black);
     }
 
     /* section menu restaurant + section menu bar */
@@ -845,7 +847,7 @@ footer .credits {
     /* section menu bar */
 
     .menu.bar {
-        box-shadow: 0 0 4px #000;
+        box-shadow: 0 0 4px var(--black);
         background-image: url(../img/section_menu_bar_background_mobile_horizontal.jpg);
     }
 
@@ -955,7 +957,6 @@ footer .credits {
     footer {
         padding: 40px 100px
     }
-
 }
 
 /* DESKTOP (MIN-W: 1025px, LANDSCAPE) */
@@ -1011,7 +1012,7 @@ footer .credits {
         position: fixed;
         top: 0;
         height: 60px;
-        box-shadow: 0 0 4px #000;
+        box-shadow: 0 0 4px var(--black);
         background-color: #000000cc;
         z-index: 100;
         text-shadow: none;
@@ -1056,15 +1057,15 @@ footer .credits {
         padding: 30px 20px;
         font-size: 22px;
         font-weight: bold;
-        color: #fff;
+        color: var(--white);
         text-align: center;
-        text-shadow: 1px 1px 4px #000;
+        text-shadow: 1px 1px 4px var(--black);
         cursor: pointer;
         transition: .2s linear;
     }
 
     nav ul li:hover {
-        color: #CED4DA;
+        color: var(--mainColorLightGrey);
         transform: scale(.9);
     }
 
@@ -1176,6 +1177,11 @@ footer .credits {
 
     .reservation-panel button a {
         font-size: 14px;
+        transition: .3s;
+    }
+
+    .reservation-panel button a:hover {
+        background-color: var(--mainColorDark);
     }
 
     /* section contact */
@@ -1190,6 +1196,14 @@ footer .credits {
         margin: 0 auto;
     }
 
+    .contact-socials i {
+        transition: .3s;
+    }
+
+    .contact-socials i:hover {
+        opacity: .5;
+    }
+
     /* footer */
 
     footer p {
@@ -1201,7 +1215,6 @@ footer .credits {
     footer .back {
         cursor: pointer;
     }
-
 }
 
 @media (min-width: 1300px) and (orientation:landscape) {
@@ -1211,7 +1224,6 @@ footer .credits {
     nav ul li {
         font-size: 24px;
     }
-
 }
 
 @media (min-width: 1600px) and (orientation:landscape) {
@@ -1239,7 +1251,6 @@ footer .credits {
     nav ul li {
         font-size: 26px;
     }
-
 }
 
 /* FIREFOX HEADER BACKGROUND-IMAGE ANIMATION BUG FIX */
