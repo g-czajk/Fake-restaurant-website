@@ -42,6 +42,7 @@ header {
     background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
     background-size: 135%;
     color: var(--white);
+    -webkit-animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
     animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
 }
 
@@ -107,6 +108,7 @@ header .title-wrap .title p {
     height: 26px;
     transition: .2s;
     z-index: 1;
+    -webkit-animation: show 2s 2.5s ease both;
     animation: show 2s 2.5s ease both;
     z-index: 99;
 }
@@ -174,6 +176,7 @@ nav {
 
 nav.show {
     display: block;
+    -webkit-animation: nav-show 1s ease both;
     animation: nav-show 1s ease both;
 }
 
@@ -588,9 +591,21 @@ footer .credits {
     margin: 20px 0;
 }
 
+@-webkit-keyframes background-size-mobile-portrait-small {
+    100% {
+        background-size: 145%;
+    }
+}
+
 @keyframes background-size-mobile-portrait-small {
     100% {
         background-size: 145%;
+    }
+}
+
+@-webkit-keyframes background-size-mobile-portrait-big {
+    100% {
+        background-size: 120%;
     }
 }
 
@@ -600,9 +615,21 @@ footer .credits {
     }
 }
 
+@-webkit-keyframes background-size-mobile-horizontal-small {
+    100% {
+        background-size: 110%;
+    }
+}
+
 @keyframes background-size-mobile-horizontal-small {
     100% {
         background-size: 110%;
+    }
+}
+
+@-webkit-keyframes background-size-mobile-horizontal-big {
+    100% {
+        background-size: 130%;
     }
 }
 
@@ -612,9 +639,41 @@ footer .credits {
     }
 }
 
+@-webkit-keyframes background-size-desktop {
+    100% {
+        background-size: auto 115%;
+    }
+}
+
 @keyframes background-size-desktop {
     100% {
         background-size: auto 115%;
+    }
+}
+
+@-webkit-keyframes img-change {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -644,6 +703,16 @@ footer .credits {
     }
 }
 
+@-webkit-keyframes nav-show {
+    40% {
+        opacity: .95;
+    }
+
+    100% {
+        opacity: .95;
+    }
+}
+
 @keyframes nav-show {
     40% {
         opacity: .95;
@@ -665,6 +734,7 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_portrait_big_1.jpg);
         background-size: 110%;
+        -webkit-animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
@@ -753,6 +823,7 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_horizontal_small_1.jpg);
         background-size: 100%;
+        -webkit-animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
@@ -889,6 +960,7 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_horizontal_big_1.jpg);
         background-size: 120%;
+        -webkit-animation: background-size-mobile-horizontal-big 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-horizontal-big 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
@@ -969,6 +1041,7 @@ footer .credits {
         background-image: url(../img/restaurant_main_desktop_1.jpg);
         background-size: auto 110%;
         background-position-x: center;
+        -webkit-animation: background-size-desktop 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-desktop 8s infinite linear alternate, img-change 8s infinite linear;
     }
 
@@ -1257,6 +1330,7 @@ footer .credits {
 
 @supports (-moz-appearance:none) {
     header {
+        -webkit-animation: img-change 8s infinite linear;
         animation: img-change 8s infinite linear;
     }
 }
