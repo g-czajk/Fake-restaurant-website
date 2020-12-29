@@ -577,6 +577,10 @@ footer a {
 }
 
 footer .back {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -590,6 +594,8 @@ footer .disclaimer {
 footer .credits {
     margin: 20px 0;
 }
+
+/* ANIMATION */
 
 @-webkit-keyframes background-size-mobile-portrait-small {
     100% {
@@ -1287,6 +1293,11 @@ footer .credits {
 
     footer .back {
         cursor: pointer;
+        transition: .3s;
+    }
+
+    footer .back:hover {
+        opacity: .5;
     }
 }
 
@@ -1304,7 +1315,7 @@ footer .credits {
     /* header */
 
     .logo-wrap img {
-        max-width: 280px;
+        max-width: 275px;
     }
 
     header .title-wrap .title {
