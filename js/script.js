@@ -20,23 +20,23 @@ function changeElement() {
     }
 
     if (window.innerWidth < 768 && window.innerWidth < window.innerHeight) {
-        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_portrait_small_${activeElement + 1}.jpg)`;
+        header.style.backgroundImage = `url(img/restaurant_main_mobile_portrait_small_${activeElement + 1}.jpg)`;
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < window.innerHeight) {
-        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_portrait_big_${activeElement + 1}.jpg)`;
+        header.style.backgroundImage = `url(img/restaurant_main_mobile_portrait_big_${activeElement + 1}.jpg)`;
     }
 
     if (window.innerWidth >= 520 && window.innerWidth < 900 && window.innerWidth > window.innerHeight) {
-        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_horizontal_small_${activeElement + 1}.jpg)`;
+        header.style.backgroundImage = `url(img/restaurant_main_mobile_horizontal_small_${activeElement + 1}.jpg)`;
     }
 
     if (window.innerWidth >= 900 && window.innerWidth > window.innerHeight) {
-        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_mobile_horizontal_big_${activeElement + 1}.jpg)`;
+        header.style.backgroundImage = `url(img/restaurant_main_mobile_horizontal_big_${activeElement + 1}.jpg)`;
     }
 
     if (window.innerWidth >= 1025 && window.innerWidth > window.innerHeight) {
-        header.style.backgroundImage = `url(../Strona-restauracja/img/restaurant_main_desktop_${activeElement + 1}.jpg)`;
+        header.style.backgroundImage = `url(img/restaurant_main_desktop_${activeElement + 1}.jpg)`;
     }
 
     titleH1.textContent = titleH1Change[activeElement];
