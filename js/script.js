@@ -287,13 +287,4 @@ function carouselHeightSet() {
     carousel.style.height = `${galleryImage[0].clientHeight}px`;
 }
 
-carouselHeightSet()
-
-// RELOAD PAGE ON FLIP ON MOBILE DEVICES (TO ADJUST SIZE OF IMAGES AND GALLERY SLIDER HEIGHT)
-
-if (window.innerWidth <= 1024) {
-
-    window.addEventListener('resize', function () {
-        location.reload();
-    })
-}
+carouselHeightSet();
