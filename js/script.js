@@ -287,4 +287,4 @@ function carouselHeightSet() {
     carousel.style.height = `${galleryImage[0].clientHeight}px`;
 }
 
-carouselHeightSet();
+window.addEventListener('DOMContentLoaded', carouselHeightSet);
