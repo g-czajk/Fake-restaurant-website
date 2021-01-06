@@ -150,7 +150,7 @@ function navFollow() {
 
 const galleryImage = [...document.querySelectorAll('.carousel-wrap img')];
 const dots = [...document.querySelectorAll('.dots i')];
-const arrows = [...document.querySelectorAll('.carousel-wrap span i')]
+const arrows = [...document.querySelectorAll('.carousel-wrap span')]
 
 const slideInterval = 6000;
 

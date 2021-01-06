@@ -270,20 +270,22 @@ nav ul li {
 .gallery .carousel-wrap span {
     display: block;
     position: absolute;
+    width: 36px;
     font-size: 36px;
     color: var(--white);
+    text-align: center;
     z-index: 11;
 }
 
 .gallery .carousel-wrap span.arrow-back {
     top: 50%;
-    left: 5%;
+    left: 4%;
     transform: translateY(-50%);
 }
 
 .gallery .carousel-wrap span.arrow-next {
     top: 50%;
-    right: 5%;
+    right: 4%;
     transform: translateY(-50%);
 }
 
@@ -798,6 +800,7 @@ footer .credits {
     /* section gallery */
 
     .gallery .carousel-wrap span {
+        width: 42px;
         font-size: 42px;
     }
 
@@ -1355,7 +1358,7 @@ footer .credits {
 /* FIREFOX HEADER BACKGROUND-IMAGE ANIMATION BUG FIX */
 
 @supports (-moz-appearance:none) {
-    header {
+    header.animate {
         -webkit-animation: img-change 8s infinite linear;
         animation: img-change 8s infinite linear;
     }
