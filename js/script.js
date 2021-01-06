@@ -44,7 +44,12 @@ function changeElement() {
     title.className = `title ${titleMove[activeElement]}`;
 }
 
-setInterval(changeElement, timeChange);
+function startAnimation() {
+    header.classList.add('animate');
+    setInterval(changeElement, timeChange)
+}
+
+window.addEventListener('load', startAnimation);
 
 // BURGER MENU TOGGLE
 

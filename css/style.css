@@ -42,6 +42,9 @@ header {
     background-image: url(../img/restaurant_main_mobile_portrait_small_1.jpg);
     background-size: 135%;
     color: var(--white);
+}
+
+header.animate {
     -webkit-animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
     animation: background-size-mobile-portrait-small 8s infinite linear alternate, img-change 8s infinite linear;
 }
@@ -740,6 +743,9 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_portrait_big_1.jpg);
         background-size: 110%;
+    }
+
+    header.animate {
         -webkit-animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-portrait-big 8s infinite linear alternate, img-change 8s infinite linear;
     }
@@ -829,6 +835,9 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_horizontal_small_1.jpg);
         background-size: 100%;
+    }
+
+    header.animate {
         -webkit-animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-horizontal-small 8s infinite linear alternate, img-change 8s infinite linear;
     }
@@ -966,6 +975,9 @@ footer .credits {
     header {
         background-image: url(../img/restaurant_main_mobile_horizontal_big_1.jpg);
         background-size: 120%;
+    }
+
+    header.animate {
         -webkit-animation: background-size-mobile-horizontal-big 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-mobile-horizontal-big 8s infinite linear alternate, img-change 8s infinite linear;
     }
@@ -1047,6 +1059,9 @@ footer .credits {
         background-image: url(../img/restaurant_main_desktop_1.jpg);
         background-size: auto 110%;
         background-position-x: center;
+    }
+
+    header.animate {
         -webkit-animation: background-size-desktop 8s infinite linear alternate, img-change 8s infinite linear;
         animation: background-size-desktop 8s infinite linear alternate, img-change 8s infinite linear;
     }
